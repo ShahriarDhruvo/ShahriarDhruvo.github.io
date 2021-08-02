@@ -2,10 +2,10 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Brittany Chiang',
+    title: 'Shahriar Dhruvo',
     description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+      'Shahriar Dhruvo is a Full-stack Engineer, Linux and AI enthusiast and loves to learn new technologies to create open-source tools, websites, and games.',
+    siteUrl: 'https://shahriardhruvo.netlify.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'BrittanyChiang',
-        short_name: 'BrittanyChiang',
+        name: 'ShahriarDhruvo',
+        short_name: 'ShahriarDhruvo',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,

@@ -61,7 +61,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    // background-color: var(--green);
 
     &:hover,
     &:focus {
@@ -73,17 +73,17 @@ const StyledPic = styled.div`
         left: 15px;
       }
 
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
+      // .img {
+      //   filter: none;
+      //   mix-blend-mode: normal;
+      // }
     }
 
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      // mix-blend-mode: multiply;
+      // filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
 
