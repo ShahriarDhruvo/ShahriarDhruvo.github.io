@@ -24,6 +24,18 @@ import SFMonoRegularItalicWoff2 from '@fonts/SFMono/SFMono-RegularItalic.woff2';
 import SFMonoSemiboldItalicWoff from '@fonts/SFMono/SFMono-SemiboldItalic.woff';
 import SFMonoSemiboldItalicWoff2 from '@fonts/SFMono/SFMono-SemiboldItalic.woff2';
 
+// SED
+import MontserratBold from '@fonts/Montserrat/Montserrat-Bold.ttf';
+import MontserratLight from '@fonts/Montserrat/Montserrat-Light.ttf';
+import MontserratBlack from '@fonts/Montserrat/Montserrat-Black.ttf';
+import MontserratRegular from '@fonts/Montserrat/Montserrat-Regular.ttf';
+
+import MontserratItalic from '@fonts/Montserrat/Montserrat-Italic.ttf';
+import MontserratBoldItalic from '@fonts/Montserrat/Montserrat-BoldItalic.ttf';
+import MontserratLightItalic from '@fonts/Montserrat/Montserrat-LightItalic.ttf';
+import MontserratBlackItalic from '@fonts/Montserrat/Montserrat-BlackItalic.ttf';
+// SED
+
 const calibreNormalWeights = {
   400: [CalibreRegularWoff, CalibreRegularWoff2],
   500: [CalibreMediumWoff, CalibreMediumWoff2],
@@ -46,6 +58,22 @@ const sfMonoItalicWeights = {
   600: [SFMonoSemiboldItalicWoff, SFMonoSemiboldItalicWoff2],
 };
 
+// SED
+const montserratNormalWeights = {
+  300: [MontserratLight],
+  400: [MontserratRegular],
+  500: [MontserratBlack],
+  600: [MontserratBold],
+};
+
+const montserratItalicWeights = {
+  300: [MontserratLightItalic],
+  400: [MontserratItalic],
+  500: [MontserratBlackItalic],
+  600: [MontserratBoldItalic],
+};
+// SED
+
 const calibre = {
   name: 'Calibre',
   normal: calibreNormalWeights,
@@ -57,6 +85,14 @@ const sfMono = {
   normal: sfMonoNormalWeights,
   italic: sfMonoItalicWeights,
 };
+
+// SED
+const montserrat = {
+  name: 'Montserrat',
+  normal: montserratNormalWeights,
+  italic: montserratItalicWeights,
+};
+// SED
 
 const createFontFaces = (family, style = 'normal') => {
   let styles = '';
@@ -86,8 +122,18 @@ const calibreItalic = createFontFaces(calibre, 'italic');
 const sfMonoNormal = createFontFaces(sfMono);
 const sfMonoItalic = createFontFaces(sfMono, 'italic');
 
+// SED
+const montserratNormal = createFontFaces(montserrat);
+const montserratItalic = createFontFaces(montserrat, 'italic');
+// SED
+
 const Fonts = css`
-  ${calibreNormal + calibreItalic + sfMonoNormal + sfMonoItalic}
+  ${calibreNormal +
+  calibreItalic +
+  sfMonoNormal +
+  sfMonoItalic +
+  montserratNormal +
+  montserratItalic}
 `;
 
 export default Fonts;

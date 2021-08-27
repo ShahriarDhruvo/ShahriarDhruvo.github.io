@@ -19,6 +19,8 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  text-align: justify;
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -126,7 +128,9 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'React', 'Eleventy', 'Vue', 'Node.js', 'WordPress'];
+  const skillsWillDone = ['TypeScript', 'GraphQL', 'Docker', 'Deep Learning'];
+  const skillsDone = ['React', 'Django', 'Django Rest Framework', 'Shell Scripting'];
+  const programmingLang = ['C/C++', 'Python', 'JavaScript (ES6+)'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,28 +140,33 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Dhruvo and I enjoy creating things that live on the internet. My
+              interest in web development started back in 2020 when I decided to do my academic
+              project by using PHP, MySQL — turns out the simplicity of building my project by using
+              PHP and the thrill of building something completely on my own taught me a lot! Now I
+              am facinated with Deep Learning and Computer Vision that can solve something we human
+              thought couldn't be achieved before.
             </p>
 
-            <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>Fast-forward to today, and I've had learnt ReactJS, Django and many more.</p>
           </div>
 
+          <br />
+          <p>Technologies I've worked with:</p>
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {skillsDone && skillsDone.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul>
+
+          <br />
+          <p>Few technologies I'm interested in:</p>
+          <ul className="skills-list">
+            {skillsWillDone && skillsWillDone.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul>
+
+          <br />
+          <p>Languages I am proficient at:</p>
+          <ul className="skills-list">
+            {programmingLang && programmingLang.map((lang, i) => <li key={i}>{lang}</li>)}
           </ul>
         </StyledText>
 
